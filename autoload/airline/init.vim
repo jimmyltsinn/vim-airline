@@ -183,7 +183,7 @@ function! airline#init#sections()
     let g:airline_section_x = airline#section#create_right(['tagbar', 'filetype'])
   endif
   if !exists('g:airline_section_y')
-    let g:airline_section_y = airline#section#create_right(['ffenc'])
+    let g:airline_section_y = airline#section#create(['ffenc', ' %{strftime("%H:%M:%S")}'])
   endif
   if !exists('g:airline_section_z')
     if winwidth(0) > 80
